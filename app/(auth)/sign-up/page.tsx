@@ -1,12 +1,13 @@
 import React from "react";
 import { cn } from "@/lib/utils";
+import { AuthForm } from "@/components/shared/auth-form";
 
-interface Props {
-  className?: string;
-}
-
-const SignUp: React.FC<Props> = ({ className }) => {
-  return <div className={cn(className)}>SignUp</div>;
+const SignUp = () => {
+  return (
+    <section className={cn("flex-center size-full max-sm:px-6")}>
+      <AuthForm type="sing-up" />
+    </section>
+  );
 };
 
 export default SignUp;
