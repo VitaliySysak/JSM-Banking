@@ -136,6 +136,7 @@ declare interface CreditCardProps {
   account: Account;
   userName: string;
   showBalance?: boolean;
+  className?: string;
 }
 
 declare interface BankInfoProps {
@@ -215,6 +216,7 @@ declare interface RightSidebarProps {
   user: User;
   transactions: Transaction[];
   banks: Bank[] & Account[];
+  className?: string;
 }
 
 declare interface SiderbarProps {

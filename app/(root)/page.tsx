@@ -2,13 +2,14 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import { HeaderBox } from "@/components/shared/header-box";
 import { TotalBalanceBox } from "@/components/shared/total-balance-box";
+import { RightSidebar } from "@/components/shared/right-sidebar";
 
 interface Props {
   className?: string;
 }
 
 const Home: React.FC<Props> = ({ className }) => {
-  const loggedIn = { firstName: "Vitaliy" };
+  const loggedIn = { firstName: "Vitaliy", lastName: "Sysak", email: "bering856@gmail.com" };
   return (
     <section className={cn("home", className)}>
       <div className="home-content">
@@ -21,7 +22,10 @@ const Home: React.FC<Props> = ({ className }) => {
           />
           <TotalBalanceBox accounts={[]} totalBanks={1} totalCurrentBalance={1250.35} />
         </header>
+        RECENT TRANSACTIONS
       </div>
+
+      <RightSidebar user={loggedIn} transactions={[]} banks={[{currentBalance: 123.50}, {}]} />
     </section>
   );
 };
