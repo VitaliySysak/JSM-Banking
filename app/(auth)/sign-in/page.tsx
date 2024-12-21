@@ -5,7 +5,7 @@ import { AuthForm } from "@/components/shared/auth-form";
 const SignIn = () => {
   return (
     <section className={cn("flex-center size-full max-sm:px-6")}>
-      <AuthForm type="sing-in" />
+      <AuthForm type="sign-in" />
     </section>
   );
 };
